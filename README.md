@@ -6,6 +6,7 @@ Source: https://github.com/ngodn/vmware-vmmon-vmnet-linux-6.16.x.git
 # Why?
 - It's VMware's fault.
 - I don't want to compile this anymore.
+- Read the first one again.
 
 # Will you?
 Keep this updated? - No, and you shouldn't be using these blobs anyways.
@@ -26,9 +27,9 @@ lsmod | grep -q "^vmnet" && echo "vmnet OK" || echo "vmnet FAIL"
 ```
 
 # Fix - VMware crashes on XKB events (XWayland)
-*... VMware crashes when interacting with the VM ...*
+*...VMware crashes when interacting with the VM...*
 
-VMware 25.x ships garbage `libX11` that crashes on `XkbGetMapChanges` under XWayland.
+VMware 25.x ships a *garbage* `libX11` that crashes on `XkbGetMapChanges` under XWayland.
 
 Replace libX11 with the system library:
 ```bash
