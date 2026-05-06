@@ -31,14 +31,14 @@ Keep this updated? - No, and you shouldn't be using these blobs anyways.
 
 ---
 
-## Load
+## Load.
 ```bash
 sudo cp ./*.ko /lib/modules/$(uname -r)/misc/
 sudo depmod -a
 sudo modprobe vmmon && sudo modprobe vmnet
 ```
 
-## Test
+## Test.
 ```bash
 lsmod | grep -q "^vmmon" && echo "vmmon OK" || echo "vmmon FAIL"
 lsmod | grep -q "^vmnet" && echo "vmnet OK" || echo "vmnet FAIL"
